@@ -14,7 +14,9 @@ export type Client = {
     lastName: string;
     firstName: string 
     dni: string; 
-    dateOfBirth: date; 
+    dateOfBirth: date;
+    address: string;
+    phone?: number;
     pharmaceutical: pharmaceutical;
     receiptDate: Array<date>;
 };
