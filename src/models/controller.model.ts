@@ -14,22 +14,26 @@ export type Client = {
     lastName: string;
     firstName: string 
     dni: string; 
-    dateOfBirth: date;
+    dateOfBirth: Date;
     address: string;
-    phone?: number;
-    pharmaceutical: pharmaceutical;
-    receiptDate: Array<date>;
+    phone?: Array<number>;
+    receipt: Array<Pharmaceutical | Device>;
+    receiptDate: Array<Date>;
 };
 
-export type date = {
+export type Date = {
     day: number;
     month: number;
     year: number;
 };
 
-export type pharmaceutical = {
+export type Pharmaceutical = {
     code: number;
     compound: string;
     route: string;
     dose: number
 };
+
+export type Device = {
+    name: string;
+}
