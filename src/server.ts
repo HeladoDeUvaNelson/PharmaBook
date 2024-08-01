@@ -12,7 +12,7 @@ const PORT: Port = process.env.PORT;
 
 
 
-app.use("/client", routersClient); 
+app.use("/clients", routersClient); 
 
 app.listen(PORT, () => { 
   console.log("Server running at PORT: ", PORT); 

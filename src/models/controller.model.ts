@@ -6,24 +6,28 @@ export type Controller = {
 
 export interface RequestBody<T> extends Express.Request {
     body: T
-}
+};
 
-export type Clients = Array<Client>
+export type Clients = Array<Client>;
  
 export type Client = {
-    lastFirstName: string; 
+    lastName: string;
+    firstName: string 
     dni: string; 
     dateOfBirth: date; 
     pharmaceutical: pharmaceutical;
-    receiptDate: Array<date>
-}
+    receiptDate: Array<date>;
+};
 
 export type date = {
-    day: number,
-    month: number,
-    year: number
-}
+    day: number;
+    month: number;
+    year: number;
+};
 
 export type pharmaceutical = {
-    compound: string,
-}
+    code: number;
+    compound: string;
+    route: string;
+    dose: number
+};
