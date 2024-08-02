@@ -34,6 +34,7 @@ export type Pharmaceutical = {
 };
 
 export type Device = {
+    code: number;
     name: string;
 }
 
