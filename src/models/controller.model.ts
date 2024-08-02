@@ -42,6 +42,7 @@ export type Device = {
 export type Topical = {
     code: number;
     compound: string;
+    route: string;
 }
 
 export type Receipt = {
