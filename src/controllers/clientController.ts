@@ -12,8 +12,12 @@ const clientController: Controller = {
                     dateOfBirth: {day: 3, month: 5, year: 2001},
                     address: "foobarStreetXx",
                     phone: [9999999999],
-                    receipt: [{code: 802, compound: "Aciclovir", route: "Comprimidos", dose: 400}],
-                    receiptDate: [{day: 2, month: 7, year: 2024}],
+                    receipt: [
+                        {
+                            receipt: {code: 802, compound: "Aciclovir", route: "Comprimidos", dose: 400},
+                            receiptDate: {day: 19, month: 7, year: 2024}
+                        }
+                    ]
                 }
             ];
 

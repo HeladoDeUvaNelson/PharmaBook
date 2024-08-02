@@ -17,8 +17,7 @@ export type Client = {
     dateOfBirth: Date;
     address: string;
     phone?: Array<number>;
-    receipt: Array<Pharmaceutical | Device>;
-    receiptDate: Array<Date>;
+    receipt: Array<Receipt>;
 };
 
 export type Date = {
@@ -36,4 +35,9 @@ export type Pharmaceutical = {
 
 export type Device = {
     name: string;
+}
+
+export type Receipt = {
+    receipt: Pharmaceutical | Device;
+    receiptDate: Date;
 }
