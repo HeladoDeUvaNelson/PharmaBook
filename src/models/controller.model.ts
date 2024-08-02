@@ -30,7 +30,8 @@ export type Pharmaceutical = {
     code: number;
     compound: string;
     route: string;
-    dose: number
+    dose: number;
+    unit: string;
 };
 
 export type Device = {

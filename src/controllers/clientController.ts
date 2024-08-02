@@ -14,7 +14,7 @@ const clientController: Controller = {
                     phone: [9999999999],
                     receipt: [
                         {
-                            receipt: {code: 802, compound: "Aciclovir", route: "Comprimidos", dose: 400},
+                            receipt: {code: 802, compound: "Aciclovir", route: "Comprimidos", dose: 400, unit: "x30"},
                             receiptDate: {day: 19, month: 7, year: 2024}
                         }
                     ]
