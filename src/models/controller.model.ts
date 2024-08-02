@@ -39,7 +39,12 @@ export type Device = {
     name: string;
 }
 
+export type Topical = {
+    code: number;
+    compound: string;
+}
+
 export type Receipt = {
-    receipt: Pharmaceutical | Device;
+    receipt: Pharmaceutical | Device | Topical;
     receiptDate: Date;
 }
