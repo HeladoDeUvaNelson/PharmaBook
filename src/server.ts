@@ -4,6 +4,7 @@ import express from "express";
 import dotenv from "dotenv";
 
 import routersClient from "./routers/client";
+import authMiddleware from "./middleware/auth";
 
 dotenv.config();
 
@@ -11,8 +12,7 @@ const app: App = express();
 const PORT: Port = process.env.PORT;
 
 
-
-app.use("/clients", routersClient); 
+app.use("/clients", authMiddleware, routersClient); 
 
 app.listen(PORT, () => { 
   console.log("Server running at PORT: ", PORT); 
