@@ -20,7 +20,8 @@ export const decryptString = (privateKeyFile: string, cypherText: string) => {
     const privateKey = fs.readFileSync(privateKeyFile, "utf8"); 
 
     const pemKey = parsePrivateKey(privateKey, 'ssh');
-    const decryptMess = privateDecrypt(pemKey.toBuffer("pem"), Buffer.from(cypherText, "base64"))
 
-    return decryptMess.toString("utf8"); 
+    const decryptMess = privateDecrypt(pemKey.toBuffer("pem"), Buffer.from(cypherText, "base64"))
+   
+    return decryptMess.toString("utf8");
 }
