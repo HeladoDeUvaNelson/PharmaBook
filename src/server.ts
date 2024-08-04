@@ -15,11 +15,11 @@ dotenv.config();
 const app: App = express();
 const PORT: Port = process.env.PORT;
 
-app.use(error);
-
 app.use("/clients", authMiddleware, routersClient); 
 
 app.use(() => { throw new NotFoundError("Not Found"); });
+
+app.use(error);
 
 app.listen(PORT, () => { 
   console.log("Server running at PORT: ", PORT); 
