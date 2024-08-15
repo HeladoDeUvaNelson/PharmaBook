@@ -15,7 +15,8 @@ export type Client = {
     firstName: string 
     dni: string; 
     dateOfBirth?: Date;
-    created_at: TimeStamp;
+    createdAt: TimeStamp;
+    updatedAt: TimeStamp;
     address?: string;
     phone?: Array<number>;
     receipt: Array<Receipt>;
@@ -42,24 +43,28 @@ export type Pharmaceutical = {
     route: string;
     dose: number;
     unit: string;
-    created_at: TimeStamp;
+    createdAt: TimeStamp;
+    updatedAt: TimeStamp;
 };
 
 export type Device = {
     code: number;
     name: string;
-    created_at: TimeStamp;
+    createdAt: TimeStamp;
+    updatedAt: TimeStamp;
 }
 
 export type Topical = {
     code: number;
     compound: string;
     route: string;
-    created_at: TimeStamp;
+    createdAt: TimeStamp;
+    updatedAt: TimeStamp;
 }
 
 export type Receipt = {
     receipt: Pharmaceutical | Device | Topical;
     receiptDate: Date;
-    created_at: TimeStamp;
+    createdAt: TimeStamp;
+    updatedAt: TimeStamp;
 }
